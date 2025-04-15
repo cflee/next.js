@@ -1,3 +1,4 @@
+use tracing::trace_span;
 use turbo_tasks::{backend::CellContent, CellId, TaskId};
 
 #[cfg(feature = "trace_task_dirty")]
@@ -24,6 +25,16 @@ impl UpdateCellOperation {
         } else {
             task.remove(&CachedDataItemKey::CellData { cell })
         };
+        let span = trace_span!(
+            "update_cell",
+            task_id = %task_id,
+            cell = %cell,
+            has_old_content = old_content.is_some(),
+            is_dirty = task.has_key(&CachedDataItemKey::Dirty {}),
+            is_stateful = task.has_key(&CachedDataItemKey::Stateful {}),
+            dependent = tracing::field::Empty
+        )
+        .entered();
 
         if let Some(in_progress) = remove!(task, InProgressCell { cell }) {
             in_progress.event.notify(usize::MAX);
@@ -39,12 +50,13 @@ impl UpdateCellOperation {
                 // This is a hack for the streaming hack. Stateful tasks are never recomputed, so this forces invalidation for them in case of this hack.
                 task.has_key(&CachedDataItemKey::Stateful {}))
         {
-            let dependent = get_many!(
+            let dependent: smallvec::SmallVec<[TaskId; 4]> = get_many!(
                 task,
                 CellDependent { cell: dependent_cell, task }
                 if dependent_cell == cell
                 => task
             );
+            span.record("dependent", dependent.len());
 
             drop(task);
             drop(old_content);
