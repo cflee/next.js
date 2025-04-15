@@ -493,8 +493,7 @@ impl<B: BackingStorage> TaskGuard for TaskGuardImpl<'_, B> {
         if key.is_persistent() {
             self.task.track_modification();
         }
-        let result = self.task.remove(key);
-        result
+        self.task.remove(key)
     }
 
     fn get(&self, key: &CachedDataItemKey) -> Option<CachedDataItemValueRef<'_>> {
