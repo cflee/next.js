@@ -90,7 +90,7 @@ describe('server-side dev errors', () => {
       if (isTurbopack) {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/gsp.js (6:3) @ getStaticProps
@@ -104,7 +104,7 @@ describe('server-side dev errors', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/gsp.js (6:3) @ getStaticProps
@@ -167,7 +167,7 @@ describe('server-side dev errors', () => {
       if (isTurbopack) {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/gssp.js (6:3) @ getServerSideProps
@@ -181,7 +181,7 @@ describe('server-side dev errors', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/gssp.js (6:3) @ getServerSideProps
@@ -244,7 +244,7 @@ describe('server-side dev errors', () => {
       if (isTurbopack) {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/blog/[slug].js (6:3) @ getServerSideProps
@@ -258,7 +258,7 @@ describe('server-side dev errors', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/blog/[slug].js (6:3) @ getServerSideProps
@@ -320,7 +320,7 @@ describe('server-side dev errors', () => {
       if (isTurbopack) {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/api/hello.js (2:3) @ handler
@@ -334,7 +334,7 @@ describe('server-side dev errors', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/api/hello.js (2:3) @ handler
@@ -352,7 +352,7 @@ describe('server-side dev errors', () => {
       if (isTurbopack) {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/api/hello.js (2:3) @ handler
@@ -366,7 +366,7 @@ describe('server-side dev errors', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/api/hello.js (2:3) @ handler
@@ -428,7 +428,7 @@ describe('server-side dev errors', () => {
       if (isTurbopack) {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/api/blog/[slug].js (2:3) @ handler
@@ -442,7 +442,7 @@ describe('server-side dev errors', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/api/blog/[slug].js (2:3) @ handler
@@ -460,7 +460,7 @@ describe('server-side dev errors', () => {
       if (isTurbopack) {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/api/blog/[slug].js (2:3) @ handler
@@ -474,7 +474,7 @@ describe('server-side dev errors', () => {
       } else {
         await expect(browser).toDisplayRedbox(`
          {
-           "description": "ReferenceError: missingVar is not defined",
+           "description": "missingVar is not defined",
            "environmentLabel": null,
            "label": "Runtime Error",
            "source": "pages/api/blog/[slug].js (2:3) @ handler
