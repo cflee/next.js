@@ -25,9 +25,6 @@ describe('persistent-caching', () => {
   }
 
   async function start() {
-    if (!isNextDev) {
-      await next.build()
-    }
     await next.start()
   }
 
@@ -105,6 +102,5 @@ describe('persistent-caching', () => {
         )
       }
     )
-    await start()
   })
 })
