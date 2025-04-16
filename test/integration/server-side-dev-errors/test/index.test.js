@@ -67,7 +67,7 @@ describe('server-side dev errors', () => {
       const stderrOutput = stripAnsi(stderr.slice(stderrIdx)).trim()
       if (isTurbopack) {
         expect(stderrOutput).toContain(
-          ' ⨯ ReferenceError: missingVar is not defined' +
+          '⨯ ReferenceError: missingVar is not defined' +
             '\n    at getStaticProps (../../test/integration/server-side-dev-errors/pages/gsp.js:6:2)' +
             // Next.js internal frame. Feel free to adjust.
             // Not ignore-listed because we're not in an isolated app and Next.js is symlinked so it's not in node_modules
@@ -144,7 +144,7 @@ describe('server-side dev errors', () => {
       const stderrOutput = stripAnsi(stderr.slice(stderrIdx)).trim()
       if (isTurbopack) {
         expect(stderrOutput).toContain(
-          ' ⨯ ReferenceError: missingVar is not defined' +
+          '⨯ ReferenceError: missingVar is not defined' +
             '\n    at getServerSideProps (../../test/integration/server-side-dev-errors/pages/gssp.js:6:2)' +
             // Next.js internal frame. Feel free to adjust.
             // Not ignore-listed because we're not in an isolated app and Next.js is symlinked so it's not in node_modules
@@ -221,7 +221,7 @@ describe('server-side dev errors', () => {
       const stderrOutput = stripAnsi(stderr.slice(stderrIdx)).trim()
       if (isTurbopack) {
         expect(stderrOutput).toContain(
-          ' ⨯ ReferenceError: missingVar is not defined' +
+          '⨯ ReferenceError: missingVar is not defined' +
             '\n    at getServerSideProps (../../test/integration/server-side-dev-errors/pages/blog/[slug].js:6:2)' +
             // Next.js internal frame. Feel free to adjust.
             // Not ignore-listed because we're not in an isolated app and Next.js is symlinked so it's not in node_modules
@@ -297,7 +297,7 @@ describe('server-side dev errors', () => {
       const stderrOutput = stripAnsi(stderr.slice(stderrIdx)).trim()
       if (isTurbopack) {
         expect(stderrOutput).toContain(
-          ' ⨯ ReferenceError: missingVar is not defined' +
+          '⨯ ReferenceError: missingVar is not defined' +
             '\n    at handler (../../test/integration/server-side-dev-errors/pages/api/hello.js:2:2)' +
             // Next.js internal frame. Feel free to adjust.
             // Not ignore-listed because we're not in an isolated app and Next.js is symlinked so it's not in node_modules
@@ -328,6 +328,8 @@ describe('server-side dev errors', () => {
              |   ^",
            "stack": [
              "handler pages/api/hello.js (2:3)",
+             "async invokeRouteModule ../../../packages/next/dist/src/build/templates/pages-api.ts (184:7)",
+             "async Module.handler ../../../packages/next/dist/src/build/templates/pages-api.ts (250:7)",
            ],
          }
         `)
@@ -360,6 +362,8 @@ describe('server-side dev errors', () => {
              |   ^",
            "stack": [
              "handler pages/api/hello.js (2:3)",
+             "async invokeRouteModule ../../../packages/next/dist/src/build/templates/pages-api.ts (184:7)",
+             "async Module.handler ../../../packages/next/dist/src/build/templates/pages-api.ts (250:7)",
            ],
          }
         `)
@@ -404,7 +408,7 @@ describe('server-side dev errors', () => {
       // FIXME(veil): error repeated
       if (isTurbopack) {
         expect(stderrOutput).toContain(
-          ' ⨯ ReferenceError: missingVar is not defined' +
+          '⨯ ReferenceError: missingVar is not defined' +
             '\n    at handler (../../test/integration/server-side-dev-errors/pages/api/blog/[slug].js:2:2)' +
             // Next.js internal frame. Feel free to adjust.
             // Not ignore-listed because we're not in an isolated app and Next.js is symlinked so it's not in node_modules
@@ -412,7 +416,7 @@ describe('server-side dev errors', () => {
         )
       } else {
         expect(stderrOutput).toContain(
-          ' ⨯ ReferenceError: missingVar is not defined' +
+          '⨯ ReferenceError: missingVar is not defined' +
             '\n    at handler (../../test/integration/server-side-dev-errors/pages/api/blog/[slug].js:2:2)' +
             // Next.js internal frame. Feel free to adjust.
             // Not ignore-listed because we're not in an isolated app and Next.js is symlinked so it's not in node_modules
@@ -436,6 +440,8 @@ describe('server-side dev errors', () => {
              |   ^",
            "stack": [
              "handler pages/api/blog/[slug].js (2:3)",
+             "async invokeRouteModule ../../../packages/next/dist/src/build/templates/pages-api.ts (184:7)",
+             "async Module.handler ../../../packages/next/dist/src/build/templates/pages-api.ts (250:7)",
            ],
          }
         `)
@@ -468,6 +474,8 @@ describe('server-side dev errors', () => {
              |   ^",
            "stack": [
              "handler pages/api/blog/[slug].js (2:3)",
+             "async invokeRouteModule ../../../packages/next/dist/src/build/templates/pages-api.ts (184:7)",
+             "async Module.handler ../../../packages/next/dist/src/build/templates/pages-api.ts (250:7)",
            ],
          }
         `)

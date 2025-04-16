@@ -667,11 +667,9 @@
   "666": "Turbopack builds are only available in canary builds of Next.js.",
   "667": "receiveExpiredTags is deprecated, and not expected to be called.",
   "668": "Internal Next.js error: Router action dispatched before initialization.",
-  "669": "Invariant: --turbopack is set but the build used Webpack",
-  "670": "Invariant: --turbopack is not set but the build used Turbopack. Add --turbopack to \"next start\".",
-  "671": "Specified images.remotePatterns must have protocol \"http\" or \"https\" received \"%s\".",
-  "672": "Expected `telemetry` to be set in globals",
-  "673": "Thrown value was ignored. This is a bug in Next.js.",
-  "674": "Route \"%s\" has a \\`generateViewport\\` that depends on Request data (\\`cookies()\\`, etc...) or uncached external data (\\`fetch(...)\\`, etc...) without explicitly allowing fully dynamic rendering. See more info here: https://nextjs.org/docs/messages/next-prerender-dynamic-viewport",
-  "675": "Expected `generateMetadata` not to block the application shell but it did."
+  "669": "Invariant: missing internal router-server-methods this is an internal bug",
+  "670": "Specified images.remotePatterns must have protocol \"http\" or \"https\" received \"%s\".",
+  "671": "Thrown value was ignored. This is a bug in Next.js.",
+  "672": "Route \"%s\" has a \\`generateViewport\\` that depends on Request data (\\`cookies()\\`, etc...) or uncached external data (\\`fetch(...)\\`, etc...) without explicitly allowing fully dynamic rendering. See more info here: https://nextjs.org/docs/messages/next-prerender-dynamic-viewport",
+  "673": "Expected `generateMetadata` not to block the application shell but it did."
 }
